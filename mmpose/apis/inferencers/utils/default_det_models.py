@@ -1,10 +1,9 @@
 # Copyright (c) OpenMMLab. All rights reserved.
 import os.path as osp
 
-from mmengine.config.utils import MODULE2PACKAGE
-from mmengine.utils import get_installed_path
+import mmpose
 
-mmpose_path = get_installed_path(MODULE2PACKAGE['mmpose'])
+mmpose_path = osp.dirname(mmpose.__file__)
 
 default_det_models = dict(
     human=dict(
