@@ -8,12 +8,15 @@ include = ["mmpose"]
 [tool.hatch.build.targets.wheel]
 include = ["mmpose"]
 
+[tool.uv.sources]
+chumpy = { git = "https://github.com/nico-von-huene/chumpy.git" }
+
 [project]
 name = "mmpose"
 version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
-requires-python = ">=3.10.16"
+requires-python = ">=3.10"
 dependencies = [
     "chumpy>=0.71",
     "json-tricks>=3.17.3",
