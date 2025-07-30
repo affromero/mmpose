@@ -30,3 +30,9 @@ dependencies = [
     "torchvision>=0.19.1",
     "xtcocotools>=1.12",
 ]
+
+[tool.uv]
+environments = ["sys_platform == 'linux' or sys_platform == 'darwin' and platform_machine == 'x86_64'"]
+resolution = "highest"
+# Disable build isolation for torch to allow custom compilation
+no-build-isolation = ["torch"]
